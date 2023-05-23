@@ -30,8 +30,9 @@ class Simulate:
             print('State: Sleep')
             print('-'*30)
             if time in range(8):
-                    self.current_state = self.sleep
-            self.current_state = random.choice([self.eat, self.study])
+                self.current_state = self.sleep
+            else:
+                self.current_state = random.choice([self.eat, self.study])
 
     def eat(self):
         while True:
